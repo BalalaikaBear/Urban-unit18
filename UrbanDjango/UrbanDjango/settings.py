@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'example1',  # подключение приложения
     'example2',
     'example3',
-    'task2'
+    'task2',
+    'task3',
 ]
 
 MIDDLEWARE = [
