@@ -1,21 +1,24 @@
-from django.shortcuts import render, HttpResponse
-from typing import Any
+from django.shortcuts import render
+from django.http import HttpRequest, HttpResponse
 
-def main(request: Any) -> HttpResponse:
+
+def main(request: HttpRequest) -> HttpResponse:
     """Главная страница."""
     context = {
         'title': 'Главная страница',
     }
     return render(request, 'fourth_task/main.html', context)
 
-def cart(request: Any) -> HttpResponse:
+
+def cart(request: HttpRequest) -> HttpResponse:
     """Корзина."""
     context = {
         'title': 'Корзина',
     }
     return render(request, 'fourth_task/cart.html', context)
 
-def shop(request: Any) -> HttpResponse:
+
+def shop(request: HttpRequest) -> HttpResponse:
     """Магазин."""
     games: list = ['Atomic Heart', 'Cuberpunk 2077', 'PayDay 2']
     numbers_of_games: int = len(games)
